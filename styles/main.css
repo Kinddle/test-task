@@ -1,0 +1,233 @@
+
+body {
+	font-family: 'HelveticaNeueCyr-Roman';
+}
+h3, h2 {
+	font-family: 'HelveticaNeueCyr-Light';
+}
+header {
+	height: 50px;
+	border-bottom: 1px solid #c6c4c4;
+}
+.step-list {
+	height: 51px;
+	border-top: 1px solid #c0c0c0;
+	border-bottom: 1px solid #c0c0c0;
+	padding-left: 0;
+	line-height: 49px;
+	font-size: 18px;
+	margin-bottom: 34px;
+}
+.step-item {
+	display: inline-block;
+	list-style: none;
+	text-align: center;
+}
+.step-item:after {
+	position: absolute;
+	content: "";
+	background: url(../images/step-item-triangle.png) no-repeat;
+	height: 51px;
+	width: 19px;
+	right: 0;
+}
+.step-item.last:after {
+	background: transparent;
+}
+.step-item span:hover {
+	background-color: #758897;
+}
+.step-item span {
+	border-radius: 35px;
+	padding: 10px 13px 8px;
+	background-color: #c0c0c0;
+	color: #ffffff;
+}
+.step-item p {
+	display: inline-block;
+	margin-bottom: 0;
+}
+.step-item.is-active p {
+	color: #206da6;
+}
+.step-item.is-active span {
+	background-color: #206da6;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+.step-item.is-completed span {
+	background-color: #758897;
+}
+.form-horizontal label {
+	font-size: 18px;
+	font-weight: normal;
+}
+.form-horizontal p {
+	margin: 10px 0 0 0;
+}
+.form-group label {
+	line-height: 20px;
+}
+.form-group {
+	margin-bottom: 35px;
+}
+.calendar {
+    text-align: center;
+}
+.btn-calendar {
+	background-color: #ffffff;
+    border-color: #cccccc;
+    color: #000000;
+    margin-right: 8px;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 5px !important;
+    height: 30px;
+    line-height: 18px;
+}
+.calendar .control-label {
+	vertical-align: middle;
+	padding: 0;
+}
+#defaultCountdown {
+	border-radius: 5px;
+	-webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+}
+.is-countdown {
+	margin: 20px auto;
+}
+select.form-control {
+	padding: 8px 12px;
+}
+label.btn-primary, .btn-primary:hover {
+	background-color: #ffffff;
+	color: #d0d0d0;
+	border: 1px solid #cccccc;
+}
+.btn-primary.active:hover {
+	background-color: #3276B1;
+}
+.btn-calendar.active {
+	background-color: #758897;
+	color: #ffffff;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+}
+.calendar .btn-group {
+	margin: 0 10px; 
+}
+.Add-remove-block {
+	display: inline-block;
+}
+.gallery {
+	padding: 0;
+}
+.gallery li {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 13px;
+}
+    .close-img:after {
+        content:"";
+        width: 33px;
+        height: 33px;
+        top: -8px;
+        right: -8px;
+        position:absolute;
+        background: url(../images/close-btn.png) no-repeat;
+        display: none;
+    }
+    .close-img:hover:after {
+        content:"";
+        display: block;
+        cursor: pointer;
+    }
+.save-btn {
+	background-color: #206da6;
+	-webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 5px !important;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    font-size: 18px;
+    display: block;
+    margin: 0 auto 20px;
+}
+.save-btn:hover, .save-btn:focus {
+	background-color: #206da6;
+	color: #ffffff;
+}
+input[type="file"] {
+	display: none;
+}
+
+/* Landscape phones and down */
+
+  @media (max-width: 480px) {
+    .step-item {
+    	font-size: 14px;
+    	padding: 0 10px 0 0;    
+    }
+    .step-item span {
+    	padding:10px 11px 7px 11px;
+    }
+    .form-horizontal label {
+    	font-size: 14px;
+    }
+    .control-label {
+    	display: inline-block;
+    	float: left;
+    }
+    .form-group {
+	margin-bottom: 25px;
+    }
+    .btn-calendar {
+    	margin-right: 5px;
+    }
+    .calendar .btn.btn-calendar {
+		padding: 6px;
+		margin-bottom: 5px;
+	}
+	.gallery {
+		text-align: center;
+	}
+}
+ @media (max-width: 768px) {
+    .form-horizontal .form-group {
+    	margin-right: 0 !important;
+    	margin-left: 0 !important;
+    }
+    .form-horizontal label {
+    	width: 110px;
+    }
+    .btn-group .btn.btn-primary {
+    	width: 90px;
+    }
+    .calendar label {
+    	width: auto;
+    }
+    .calendar .btn.btn-calendar {
+		padding: 6px;
+		font-size: 14px;
+	}
+	.calendar .control-label {
+		float: left;
+	}
+	.Add-remove-block {
+        float: right;
+	}
+	.gallery {
+		text-align: center;
+	}
+	.calendar .btn-group {
+		float: left;
+	}
+ }
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 769px) and (max-width: 992px){ 
+	.calendar .btn.btn-calendar {
+		padding: 6px 8px;
+	}
+}

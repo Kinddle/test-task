@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+ 
+<html>
+ 
+    <head>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport"> -->
+        <meta content="" name="description">
+        <meta content="" name="author">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <title>Test</title>
+
+        <link rel="stylesheet" href="images" />
+        <link href="styles/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="styles/main.css" />
+        <link rel="stylesheet" href="fonts" />
+        <link rel="stylesheet" type="text/css" href="styles/jquery.countdown.css"> 
+        <style>
+            @font-face {
+                font-family: HelveticaNeueCyr-Roman;
+                src: url(fonts/HelveticaNeueCyr-Roman.otf);
+            }
+            @font-face {
+                font-family: HelveticaNeueCyr-Light;
+                src: url(fonts/HelveticaNeueCyr-Light.otf);
+            }
+        </style>
+        <style type="text/css">
+            #defaultCountdown { width: 240px; height: 45px; }
+        </style>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="js/jquery.plugin.js"></script> 
+        <script type="text/javascript" src="js/jquery.countdown.js"></script>
+        <script type="text/javascript" src="js/jquery.countdown-uk.js"></script>
+
+        
+    </head>
+ 
+    <body>
+        <header>
+            <div class="container">
+            </div>
+        </header>
+    
+        <section>
+            <div class="container">
+                <h2>Create an excursion</h2>
+                <ul class="step-list">
+                    <li class="col-md-4 col-sm-4 col-xs-2 step-item is-completed">
+                        <span>1</span>
+                        <p class="hidden-xs" href="#">Overview</p>
+                    </li>
+                    <li class="col-md-4 col-sm-4 col-xs-8 step-item is-active">
+                        <span>2</span>
+                        <p href="#"> Route & Services</p>
+                    </li>
+                    <li class="col-md-4 col-sm-4 col-xs-2 step-item last">
+                        <span>3</span> 
+                        <p class="hidden-xs" href="#">Prices</p>
+                    </li>
+                </ul>
+                <form role="form" class="form-horizontal">
+                    <div class="row">
+                        <div class="form-group col-md-5 col-sm-5 col-xs-12">
+                            <label for="group" class="col-md-offset-3 col-sm-offset-1  pull-left control-label">Group</label>
+                            <div class="col-md-7 col-sm-7 col-xs-7">
+                                <select class="form-control col-sm-6">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-7 col-sm-7 col-xs-12">
+                            <label for="name" class="pull-left control-label col-sm-offset-0 col-md-offset-0">Excursion name</label>
+                            <div class="col-sm-8 col-xs-7 col-xs-7">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Diving at Phi Phi islands">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12">
+                            <label for="group" class="pull-left col-md-offset-7 col-sm-offset-6 control-label">Category</label>
+                            <div class="col-md-3 col-sm-3 col-xs-7">
+                                <select class="form-control col-md-1 col-sm-1">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12 col-xs-offset-1">
+                            <label for="name" class="control-label pull-left">Status</label>
+                            <div class="btn-group col-md-5" data-toggle="buttons">
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="option1"> Active
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="option2"> Disable
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="calendar col-xs-12">
+                            <label for="name" class="control-label">Date & Days</label>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-calendar">
+                                    <input type="checkbox"> Mon
+                                </label>
+                                <label class="btn btn-calendar">
+                                    <input type="checkbox"> Tue
+                                </label>
+                                <label class="btn btn-calendar">
+                                    <input type="checkbox"> Wed
+                                </label>
+                                <label class="btn btn-calendar">
+                                    <input type="checkbox"> Thu
+                                </label>
+                                <label class="btn btn-calendar">
+                                    <input type="checkbox"> Fri
+                                </label>
+                                <label class="btn btn-calendar">
+                                    <input type="checkbox"> Sat
+                                </label>
+                                <label class="btn btn-calendar">
+                                    <input type="checkbox"> Sun
+                                </label>
+                                <label class="btn btn-calendar">
+                                    <input type="checkbox"> All
+                                </label>
+                                
+                            </div>
+                            <div class="Add-remove-block">
+                            <a href="#">Add/remove dates</a>
+                            <img src="./images/calendar.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="defaultCountdown">
+                            <div class="countdown is-countdown">
+                                <span class="countdown-row countdown-show4">
+                                    <span class="countdown-section"></span>
+                                    <span class="countdown-section"></span>
+                                    <span class="countdown-section"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3>Description</h3>
+                            <p>Description for Office</p>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>    
+                    </div>   
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <p>Description for Catalog</p>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>   
+                </form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Photos</h3>
+                        <div id="upload" method="post" action="upload.php" enctype="multipart/form-data">
+                            <ul class="gallery">
+                                <li> 
+                                    <div class="close-img"><img src="./images/img1.jpg"></div>
+                                </li>
+                                <li>
+                                    <div class="close-img"><img src="./images/img2.jpg"></div>
+                                </li>
+                                <li>
+                                    <div class="close-img"><img src="./images/img3.jpg"></div>
+                                </li>
+                                <li>
+                                    <div class="close-img"><img src="./images/img4.jpg"></div>
+                                </li>
+                                <li>
+                                    <div id="drop">
+                                        <a href="#"><img src="./images/img5.jpg"></a>
+                                        <input type="file" name="upl" multiple />
+                                    </div>    
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>    
+                </div>
+                <button type="button" class="btn save-btn">Save & Go to next</button>
+            </div> 
+        </section>
+        <footer>
+        </footer>
+
+        <script>
+            $('.btn').button()
+
+        </script>
+        <script>
+            var newYear = new Date(); 
+            newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1); 
+            $('#defaultCountdown').countdown({until: newYear});      
+        </script>
+        <script type="text/javascript">
+            $(selector).countdown({until: liftoffTime});
+        </script>
+        <script src="js/html5shiv.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+
+     
+</html>
